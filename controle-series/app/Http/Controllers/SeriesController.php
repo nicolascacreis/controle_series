@@ -13,7 +13,11 @@ class SeriesController extends Controller
             'Game of Thrones',
             'Stranger Things'
         ];
+        return view('series.index')-> with('series', $series);
+    }
 
-        return view('listar-series', ['series' => $series]);
+    public function create()
+    {
+        return view('series.create');
     }
 }
